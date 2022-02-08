@@ -1,0 +1,79 @@
+\documentclass[11pt, a4paper]{article}
+
+% packages
+\include{package_includes}
+
+% document setup
+\include{document_setup}
+
+\begin{document}
+
+    % Generic Title Page
+    \include{title_page_generic}
+
+    % Bachlor Title Page
+    \include{title_page_bachelor}
+
+    % Table of Contents
+    \tableofcontents
+    \thispagestyle{empty}
+    \setcounter{page}{1}
+    \cleardoublepage
+
+    % List of Abbreviations
+    \pagenumbering{roman}
+    \phantomsection % for use with package hyperref
+    \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+    \section*{Abkürzungsverzeichnis}
+    \thispagestyle{fancy}
+    \cleardoublepage
+
+    % List of Figures
+    \phantomsection
+    \addcontentsline{toc}{section}{\listfigurename}
+    \listoffigures
+    \thispagestyle{fancy}
+    \cleardoublepage
+
+    % List of Tables
+    \phantomsection % for use with package hyperref
+    \addcontentsline{toc}{section}{\listtablename}
+    \listoftables
+    \thispagestyle{fancy}
+    \cleardoublepage
+
+    % Content
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    % sections and content go here...
+    \section{Einleitung}
+    \subsection{Heranfuehrung an das Thema}
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\footcite[vgl.][S. 21]{mustermann1} 
+
+    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.\footcite[vgl.][https://google.com..., abgerufen am 20.01.2020]{test}
+
+    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+
+    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+
+    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.\footcite[vgl.][S. 21]{mustermann}
+    \cleardoublepage
+
+    \section*{Literatur}
+    \phantomsection
+    \addcontentsline{toc}{section}{Literatur}
+
+    \subsection*{Literaturquellen}
+    \phantomsection
+    \addcontentsline{toc}{subsection}{Literaturquellen}
+    \printbibliography[type=book, heading=none]
+
+    \subsection*{Internetquellen}
+    \phantomsection
+    \addcontentsline{toc}{subsection}{Internetquellen}
+    \printbibliography[type=misc, heading=none]
+
+    % Acedemic Honesty
+    \include{academic_honesty}
+
+    \end{document}
